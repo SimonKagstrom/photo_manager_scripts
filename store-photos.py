@@ -42,7 +42,7 @@ def mangle_directory(incoming : str, outgoing : str):
 
 def sync_to_rpi(outgoing : str):
     print("rsync to rpi4")
-    return os.system("rsync -a {}/ pi@192.168.1.227:/mnt/photos/".format(outgoing))
+    return os.system("rsync -a {}/ pi@192.168.1.226:/mnt/photos/".format(outgoing))
 
 def usage():
     print(
