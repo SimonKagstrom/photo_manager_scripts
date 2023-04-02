@@ -30,7 +30,7 @@ def mangle(filename: str):
         year,month,day = date.split(":")
         hour,minute,second = time.split(":")
 
-        checksum = crc.CrcCalculator(crc.Crc8.CCITT).calculate_checksum(bytes(str(filename), 'ascii'))
+        checksum = crc.Calculator(crc.Crc8.CCITT).checksum(bytes(str(filename), 'ascii'))
 
         newname = "{}-{}-{}_{}_{}_{}_{:02x}.jpg".format(year,month,day,hour,minute,second, checksum)
 
